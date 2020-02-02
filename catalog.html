@@ -38,20 +38,46 @@
       </ul>
       <section>
         <h2>Фитьтр товаров</h2>
-        <h3>Производители:</h3>
-        <!-- тут фильтр -->
-        <h3>Группы товаров</h3>
-        <!-- тут фильтр -->
-        <button type="submit">Показать</button>
+        <form action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li><input id="filter-baxter-of-california" type="checkbox" name="baxter-of-california" checked>
+                <label for="filter-baxter-of-california">Baxter of California</label></li>
+              <li><input id="filter-mr-natty" type="checkbox" name="mr-natty">
+                <label for="filter-mr-natty">Mr Natty</label></li>
+              <li><input id="filter-suavecito" type="checkbox" name="suavecito" checked>
+                <label for="filter-suavecito">Suavecito</label></li>
+              <li><input id="filter-malin-goetz" type="checkbox" name="malin-goetz">
+                <label for="filter-malin-goetz">Malin+Goetz</label></li>
+              <li><input id="filter-myrrays" type="checkbox" name="myrrays">
+                <label for="filter-myrrays">Murray's</label></li>
+              <li><input id="filter-american-crew" type="checkbox" name="american-crew" checked>
+                <label for="filter-american-crew">American Crew</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Группы товаров</legend>
+            <ul>
+              <li><input id="filter-shave" type="radio" name="product-group" value="shaving">
+                <label for="filter-shave">Бритвенные принадлежности</label></li>
+              <li><input id="filter-hair-care" type="radio" name="product-group" value="hair-care" checked>
+                <label for="filter-hair-care">Средства для ухода</label></li>
+              <li><input id="filter-acessories" type="radio" name="product-group" value="accessories">
+                <label for="filter-acessories">Аксессуары</label></li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2>Список средств для ухода</h2>
         <ul>
           <li>
+            <a href="catalog-item.html">
             <h3>
-              <a href="catalog-item.html">
                 <span>Набор для путешествий</span>
-                <span>Baxter of California</span>
+                <span>«Baxter of California»</span>
               </a>
             </h3>
             <a href="catalog-item.html">
@@ -199,11 +225,27 @@
     <section>
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль</p>
-      <!-- Тут форма -->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-login">Логин</label>
+          <input id="user-login" type="email" name="login" placeholder="email@google.com"></p>
+        <p>
+          <label for="user-password">Пароль</label>
+          <input id="user-password" type="password" name="password" placeholder="••••••••">
+        </p>
+        <p>
+          <label>
+           <input type="checkbox" name="remember">Запомните меня
+          </label>
+           <a href="#">Я забыл пароль!</a> 
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
     <section>
       <h2>Как до нас добраться</h2>
+      <p><img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
       <button type="button">Закрыть</button>
     </section>
   </body>
